@@ -1,0 +1,91 @@
+// Variables
+$theme-color: #e999c0;
+$theme-lightcolor: #f7d8e7;
+$normal-backgrouncolor: #fff;
+$dark-backgroundcolor: #272727;
+$light-backgrouncolor: #f9f9f9;
+
+$primary-textcolor: #000;
+$primary-textcolorlight: #363636;
+$primary-textcolorlighter: #616161;
+$form-textcolor: #c8c8c8;
+
+// Adding Fonts
+@font-face {
+  font-family: PlayfairDisplay-Bold;
+  src: url("../fonts/PlayfairDisplay-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: PlayfairDisplay-BoldItalic;
+  src: url("../fonts/PlayfairDisplay-BoldItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: PlayfairDisplay-Italic;
+  src: url("../fonts/PlayfairDisplay-Italic.otf") format("opentype");
+}
+@font-face {
+  font-family: PlayfairDisplay-Regular;
+  src: url("../fonts/PlayfairDisplay-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url("../fonts/Montserrat-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("../fonts/Montserrat-Regular.otf") format("opentype");
+}
+
+// Add a background image
+@mixin backgroundImageSlider($url) {
+  background: linear-gradient(
+      90deg,
+      rgba(233, 153, 192, 1) 0%,
+      rgba(255, 255, 255, 0) 35%
+    ),
+    url($url);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @media (min-width: 669px) and (max-width: 1024px) {
+    background: linear-gradient(
+        0deg,
+        rgba(233, 153, 192, 1) 0%,
+        rgba(255, 255, 255, 0) 45%
+      ),
+      url($url);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: 668px) {
+    background: linear-gradient(
+        0deg,
+        rgba(233, 153, 192, 1) 0%,
+        rgba(255, 255, 255, 0) 45%
+      ),
+      url($url);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+// Responsive Media Query Mixins
+@mixin normalScreens {
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    @content;
+  }
+}
+@mixin midScreenc {
+  @media (min-width: 669px) and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin smallScreens {
+  @media (max-width: 668px) {
+    @content;
+  }
+}

@@ -1,0 +1,149 @@
+// ========== Header Navigation ==========
+.header-navigation {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  padding: 2rem;
+
+  .menu {
+    .menu-item {
+      padding: 0 1rem;
+    }
+  }
+}
+
+.sticky {
+  background-color: $theme-lightcolor;
+  padding: 1rem 2rem;
+}
+
+//Responsive Settings
+@include normalScreens {
+  .header-navigation {
+    padding: 1.5rem;
+
+    .menu {
+      .menu-item {
+        padding: 0 0.8rem;
+      }
+    }
+  }
+}
+
+@include midScreenc {
+  .header-navigation {
+    padding: 1.5rem;
+  }
+
+  .sticky {
+    background-color: $theme-lightcolor;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@include smallScreens {
+  .header-navigation {
+    padding: 1rem;
+
+    .menu {
+        .menu-item {
+          padding: 0;
+        }
+      }
+  }
+
+  .sticky {
+    background-color: $theme-lightcolor;
+    padding: 1rem;
+  }
+}
+// ========== Header Navigation ==========
+
+// ========== OverLayer Navigation ==========
+.overlayer-navigation {
+  width: 0;
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
+  background-color: $theme-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  transition: all ease-in-out 0.5s;
+
+  .close-moblie-menu {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .menu-item {
+      padding: 2rem 1rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@include normalScreens {
+  .overlayer-navigation {
+    .close-moblie-menu {
+      top: 5%;
+      right: 5%;
+    }
+
+    .menu {
+      .menu-item {
+        padding: 1.5rem 0.8rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@include midScreenc {
+  .overlayer-navigation {
+    .close-moblie-menu {
+      top: 5%;
+      right: 8%;
+    }
+
+    .menu {
+      .menu-item {
+        padding: 2rem 1rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@include smallScreens {
+  .overlayer-navigation {
+    .close-moblie-menu {
+      position: absolute;
+      top: 5%;
+      right: 8%;
+    }
+
+    .menu {
+
+      .menu-item {
+        padding: 1rem 0.5rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+// ========== OverLayer Navigation ==========

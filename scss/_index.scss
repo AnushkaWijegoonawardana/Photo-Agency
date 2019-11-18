@@ -1,0 +1,222 @@
+@import "function";
+
+// ========== Hero Header Section ==========
+.hero-header {
+  height: 100vh;
+  width: 100vw;
+
+  //   Hero Slider
+  .hero-slider {
+    background-color: $theme-color;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+
+    .slider {
+      position: absolute;
+      width: 70%;
+      height: 100%;
+      right: 0;
+      opacity: 0;
+      transition: opacity ease-in-out 1s;
+
+      .slider-content {
+        position: absolute;
+        top: 50%;
+        left: -10%;
+        transform: translate(-35%, -50%);
+        padding: 1rem 2rem;
+        color: $primary-textcolor;
+        opacity: 0;
+        transition: opacity ease-in-out 0.25s;
+
+        .header-slider {
+          font-size: 6rem;
+          font-family: "Montserrat-Bold", sans-serif;
+          text-transform: uppercase;
+          line-height: 80px;
+        }
+
+        .content-slider {
+          font-size: 3rem;
+          text-transform: capitalize;
+          font-family: "PlayfairDisplay-Italic", sans-serif;
+        }
+      }
+    }
+
+    .active {
+      opacity: 1;
+
+      .slider-content {
+        opacity: 1;
+      }
+    }
+
+    // Add Background Images To the Slides
+    #slider-01 {
+      @include backgroundImageSlider("../images/slider-03.jpg");
+    }
+    #slider-02 {
+      @include backgroundImageSlider("../images/slider-01.jpg");
+    }
+    #slider-03 {
+      @include backgroundImageSlider("../images/slider-02.jpg");
+    }
+  }
+
+  //   Slider Navigation Buttons
+  .slider-navigation {
+    position: absolute;
+    width: 30%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    button {
+      background-color: transparent;
+      border: none;
+      margin: 0 3rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: $primary-textcolor;
+    }
+  }
+}
+
+// Responsive Settings
+@include normalScreens {
+  .hero-header {
+    //   Hero Slider
+    .hero-slider {
+      .slider {
+        width: 60%;
+
+        .slider-content {
+          left: -20%;
+
+          .header-slider {
+            font-size: 5rem;
+            line-height: 50px;
+          }
+
+          .content-slider {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    //   Slider Navigation Buttons
+    .slider-navigation {
+      width: 40%;
+      padding: 1.5rem;
+
+      button {
+        margin: 0 2rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@include midScreenc {
+  .hero-header {
+    height: 100vh;
+    width: 100vw;
+
+    //   Hero Slider
+    .hero-slider {
+      background-color: $theme-color;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+
+      .slider {
+        width: 100%;
+        height: 70%;
+        top: 0;
+        right: 0;
+
+        .slider-content {
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+
+          .header-slider {
+            font-size: 5rem;
+            line-height: 50px;
+          }
+
+          .content-slider {
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+
+    //   Slider Navigation Buttons
+    .slider-navigation {
+      width: 100%;
+      padding: 1.5rem;
+
+      button {
+        margin: 0 2.5rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@include smallScreens {
+  .hero-header {
+    height: 100vh;
+    width: 100vw;
+
+    //   Hero Slider
+    .hero-slider {
+      background-color: $theme-color;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+
+      .slider {
+        width: 100%;
+        height: 70%;
+        top: 0;
+        right: 0;
+
+        .slider-content {
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+
+          .header-slider {
+            font-size: 3rem;
+            line-height: 30px;
+          }
+
+          .content-slider {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    //   Slider Navigation Buttons
+    .slider-navigation {
+      width: 100%;
+      padding: 1rem;
+
+      button {
+        margin: 0 1.5rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+// ========== Hero Header Section ==========

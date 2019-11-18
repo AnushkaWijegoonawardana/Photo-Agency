@@ -1,0 +1,81 @@
+@import "function";
+@import "utility";
+@import "index";
+
+// Adding Fonts
+@font-face {
+  font-family: PlayfairDisplay-Bold;
+  src: url("../fonts/PlayfairDisplay-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: PlayfairDisplay-BoldItalic;
+  src: url("../fonts/PlayfairDisplay-BoldItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: PlayfairDisplay-Italic;
+  src: url("../fonts/PlayfairDisplay-Italic.otf") format("opentype");
+}
+@font-face {
+  font-family: PlayfairDisplay-Regular;
+  src: url("../fonts/PlayfairDisplay-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url("../fonts/Montserrat-Bold.otf") format("opentype");
+}
+// Adding Fonts
+
+// General Style Resttings
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "PlayfairDisplay-Regular", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: $primary-textcolor;
+  background-color: $normal-backgrouncolor;
+  overflow-x: hidden;
+}
+
+a {
+  color: $primary-textcolor;
+  text-decoration: none;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  &:hover {
+    color: $primary-textcolorlight;
+  }
+}
+
+@include normalScreens {
+  a {
+    font-size: 1rem;
+  }
+}
+
+@include midScreenc {
+  .tab-hide {
+    display: none;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+}
+
+@include smallScreens {
+  .mobile-hide {
+    display: none;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+}
+// General Style Resttings
