@@ -220,3 +220,56 @@
   }
 }
 // ========== Hero Header Section ==========
+
+// ========== About Us Section ==========
+.about-us {
+  .about-img-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &::before {
+      content: "";
+      border: 6px solid $theme-color;
+      width: 90%;
+      height: 95%;
+      position: absolute;
+      top: -5%;
+      right: 0%;
+      z-index: -1;
+    }
+
+    img {
+      width: 90%;
+      height: auto;
+    }
+  }
+}
+
+//Responsive Settings
+@include midScreenc {
+  .about-us {
+    .about-img-content {
+      align-items: flex-start;
+
+      &::before {
+        right: 5%;
+      }
+    }
+  }
+}
+
+@include smallScreens {
+  .about-us {
+    .about-img-content {
+      align-items: flex-start;
+
+      &::before {
+        right: 5%;
+      }
+    }
+  }
+}
+// ========== About Us Section ==========

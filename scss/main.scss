@@ -25,7 +25,7 @@
 }
 // Adding Fonts
 
-// General Style Resttings
+// ========== General Style Resttings ==========
 * {
   box-sizing: border-box;
   margin: 0;
@@ -53,6 +53,12 @@ a {
   }
 }
 
+img {
+  // width: 100%;
+  display: block;
+}
+
+//Responsive Settings
 @include normalScreens {
   a {
     font-size: 1rem;
@@ -78,4 +84,45 @@ a {
     font-size: 1rem;
   }
 }
-// General Style Resttings
+// ========== General Style Resttings ==========
+
+.box-container {
+  width: 80%;
+  margin: auto;
+  padding: 6rem 0;
+}
+
+.grid-template {
+  @include displayGrid(center, center, 6rem);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+//Responsive Settings
+@include normalScreens {
+  .box-container {
+    width: 90%;
+    padding: 4rem 0;
+  }
+
+  .grid-template {
+    grid-gap: 4rem;
+  }
+}
+
+@include midScreenc {
+  .grid-template {
+    grid-template-columns: 1fr;
+  }
+}
+
+@include smallScreens {
+  .box-container {
+    width: 90%;
+    padding: 2rem 0;
+  }
+  
+  .grid-template {
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+}

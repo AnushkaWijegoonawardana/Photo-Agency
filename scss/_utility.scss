@@ -51,10 +51,10 @@
     padding: 1rem;
 
     .menu {
-        .menu-item {
-          padding: 0;
-        }
+      .menu-item {
+        padding: 0;
       }
+    }
   }
 
   .sticky {
@@ -138,7 +138,6 @@
     }
 
     .menu {
-
       .menu-item {
         padding: 1rem 0.5rem;
         font-size: 1rem;
@@ -147,3 +146,99 @@
   }
 }
 // ========== OverLayer Navigation ==========
+
+// ========== Font Styles ==========
+.section-top-header {
+  font-size: 3rem;
+  font-family:  'Montserrat-Bold', sans-serif;
+  text-transform: capitalize;
+
+  &-dark {
+    color: $primary-textcolor;
+  }
+  &-theme {
+    color: $theme-color;
+  }
+}
+
+.section-bottom-header {
+  font-size: 4rem;
+  font-family:  'Montserrat-Bold', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+
+  &-theme {
+    color: $theme-color;
+  }
+  &-dark {
+    color: $primary-textcolor;
+  }
+  &-light {
+    color: $normal-backgrouncolor;
+  }
+}
+
+.section-content {
+  font-size: 1.6rem;
+  font-family: 'PlayfairDisplay-Regular', sans-serif;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+
+  &-italic {
+    font-family: 'PlayfairDisplay-Italic', sans-serif;
+  }
+  &-blodItalic {
+    font-family: 'PlayfairDisplay-BoldItalic', sans-serif;
+  }
+}
+
+//Responsive Settings
+@include normalScreens {
+  .section-top-header {
+    font-size: 2rem;
+  }
+  
+  .section-bottom-header {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-content {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+@include midScreenc {
+  .section-top-header {
+    font-size: 2.4rem;
+  }
+  
+  .section-bottom-header {
+    font-size: 3.2rem;
+    margin-bottom: 1.6rem;
+  }
+  
+  .section-content {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+}
+
+@include smallScreens {
+  .section-top-header {
+    font-size: 1.5rem;
+  }
+  
+  .section-bottom-header {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .section-content {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+// ========== Font Styles ==========

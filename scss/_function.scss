@@ -73,6 +73,14 @@ $form-textcolor: #c8c8c8;
   }
 }
 
+// Display As a Grid
+@mixin displayGrid ($align, $justify, $gap) {
+  display: grid;
+  align-items: $align;
+  justify-content: $justify;
+  grid-gap: $gap;
+}
+
 // Responsive Media Query Mixins
 @mixin normalScreens {
   @media (min-width: 1025px) and (max-width: 1280px) {
