@@ -306,8 +306,28 @@ a.btn:hover {
 
   &-secondary {
     font-size: 1rem;
-    background-color: $normal-backgrouncolor;
-    font-family: 'Montserrat-Regular', sans-serif;
+    font-family: "Montserrat-Regular", sans-serif;
+    display: inline-block;
+    text-transform: uppercase;
+
+    &-white {
+      background-color: $normal-backgrouncolor;
+      color: $primary-textcolor;
+    }
+
+    &-dark {
+      background-color: $primary-textcolor;
+      color:  $normal-backgrouncolor;
+    }
+    
+    &-theme {
+      color:  $normal-backgrouncolor;
+      background-color: $theme-color;
+    }
   }
+}
+
+.btn.btn-secondary.btn-secondary-white:hover {
+  color: $primary-textcolor;
 }
 // ========== Btn Styles ==========

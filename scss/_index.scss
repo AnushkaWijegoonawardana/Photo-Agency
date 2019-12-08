@@ -602,3 +602,70 @@
   }
 }
 // ========== Photo Gallery Section ==========
+
+// ========== Pricing Table Section Section ==========
+.pricing-section {
+  .pricing-section-header {
+    margin-bottom: 4rem;
+  }
+
+  .pricing-table-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+    align-items: flex-end;
+    justify-content: center;
+
+    .pricing-table {
+      padding: 2rem;
+      border: 5px solid $primary-textcolor;
+      text-align: center;
+
+      &-active {
+        border-color: $theme-color;
+      }
+
+      .pricing-table-header {
+        padding-bottom: 2rem;
+
+        .section-content {
+          font-size: 2rem;
+          text-transform: capitalize;
+          line-height: 3rem;
+        }
+
+        h3 {
+          font-family: "Montserrat-Regular", sans-serif;
+          font-size: 1.2rem;
+          text-transform: uppercase;
+        }
+
+        .price-tag {
+          font-family: "Montserrat-Bold", sans-serif;
+          font-size: 2.4rem;
+          line-height: 4rem;
+          text-transform: capitalize;
+        }
+      }
+
+      .pricing-table-body {
+        padding: 2rem 0;
+        border-top: 2px solid $primary-textcolorlighter;
+        border-bottom: 2px solid $primary-textcolorlighter;
+
+        .table-body-item {
+          font-family: "Montserrat-Regular", sans-serif;
+          font-size: 1.2rem;
+          text-transform: uppercase;
+          color: $primary-textcolorlight;
+          padding: 0.5rem 0;
+        }
+      }
+
+      .pricing-section-footer {
+        padding-top: 2rem;
+      }
+    }
+  }
+}
+// ========== Pricing Table Section Section ==========
