@@ -87,3 +87,24 @@ function closeOverlayer() {
 }
 
 // ========== Overlayer Header Functions ==========
+
+// ========== Gallery Slider Settings ==========
+let gsliderIndex = 0;
+gsliderShow();
+
+function gsliderShow() {
+  let i;
+  const slides = document.querySelectorAll(".gslider-item");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  gsliderIndex++;
+
+  if (gsliderIndex > slides.length) {
+    gsliderIndex = 1;
+  }
+  slides[gsliderIndex - 1].style.display = "block";
+  setTimeout(gsliderShow, 3000);
+}
+// ========== Gallery Slider Settings ==========

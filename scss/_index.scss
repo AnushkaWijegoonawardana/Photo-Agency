@@ -267,9 +267,338 @@
       align-items: flex-start;
 
       &::before {
-        right: 5%;
+        right: 3%;
       }
     }
   }
 }
 // ========== About Us Section ==========
+
+// ========== Our Client Section ==========
+.our-clients {
+  background-color: $light-backgrouncolor;
+  text-align: center;
+
+  .section-sub-header {
+    margin-bottom: 3rem;
+  }
+
+  .client-item-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .client-items {
+      padding: 1rem;
+
+      .item-icon {
+        font-size: 3rem;
+        color: $theme-color;
+        margin-bottom: 1.5rem;
+      }
+
+      .item-number {
+        font-size: 2.4rem;
+        font-family: "Montserrat-Bold", sans-serif;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+      }
+
+      .item-description {
+        font-family: "Montserrat-Regular", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@include normalScreens {
+  .our-clients {
+    .section-sub-header {
+      margin-bottom: 2rem;
+    }
+
+    .client-item-grid {
+      .client-items {
+        .item-icon {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+
+        .item-number {
+          font-size: 1.8rem;
+          letter-spacing: 4px;
+        }
+
+        .item-description {
+          letter-spacing: 2px;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@include midScreenc {
+  .our-clients {
+    .client-item-grid {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      .client-items {
+        padding: 1.5rem;
+
+        .item-icon {
+          font-size: 2.4rem;
+          color: $theme-color;
+          margin-bottom: 1.5rem;
+        }
+
+        .item-number {
+          font-size: 1.5rem;
+          letter-spacing: 3px;
+        }
+
+        .item-description {
+          font-size: 1rem;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+}
+
+@include smallScreens {
+  .our-clients {
+    .section-sub-header {
+      margin-bottom: 1rem;
+    }
+
+    .client-item-grid {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .client-items {
+        .item-icon {
+          font-size: 2rem;
+          margin-bottom: 0.8rem;
+        }
+
+        .item-number {
+          font-size: 1.5rem;
+          letter-spacing: 3px;
+        }
+
+        .item-description {
+          letter-spacing: 1px;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+// ========== Our Client Section ==========
+
+// ========== Our Services Section ==========
+.serives-section {
+  position: relative;
+
+  .serives-text-content {
+    text-align: left;
+
+    .section-content {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .serives-img-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@include smallScreens {
+  .serives-section {
+    .serives-text-content {
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+// ========== Our Services Section ==========
+
+// ========== Photo Gallery Section ==========
+.photo-gallery {
+  background-color: $theme-color;
+
+  .gallery-slider-container {
+    .gslider-item {
+      .gslider-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+
+        .gslider-header-txt {
+          font-family: "Montserrat-Regular", sans-serif;
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          line-height: 1.6;
+          margin-right: 1rem;
+        }
+
+        .gslider-header-line {
+          width: 200px;
+          height: 2px;
+          background-color: $primary-textcolor;
+        }
+      }
+
+      .gslider-img-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+      }
+    }
+  }
+
+  .gallery-right {
+    position: relative;
+
+    .gallery-right-overlayer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba($primary-textcolor, 0.5);
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 1s opacity ease-in-out;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      .btn {
+        margin-bottom: 2rem;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@include normalScreens {
+  .photo-gallery {
+    .gallery-slider-container {
+      .gslider-item {
+        .gslider-header {
+          margin-top: 0.75rem;
+          margin-bottom: 1.5rem;
+
+          .gslider-header-txt {
+            font-size: 1.2rem;
+            line-height: 1.4;
+          }
+
+          .gslider-header-line {
+            width: 150px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include midScreenc {
+  .photo-gallery {
+    .gallery-slider-container {
+      .gslider-item {
+        .gslider-header {
+          margin-top: 0.75rem;
+          margin-bottom: 1.5rem;
+
+          .gslider-header-txt {
+            font-size: 1.2rem;
+          }
+
+          .gslider-header-line {
+            width: 150px;
+          }
+        }
+      }
+    }
+
+    .gallery-right {
+      .gallery-right-overlayer {
+        opacity: 1;
+
+        .btn {
+          margin-bottom: 2rem;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@include smallScreens {
+  .photo-gallery {
+    .gallery-slider-container {
+      .gslider-item {
+        border-bottom: 2px solid $primary-textcolor;
+        padding-bottom: 1rem;
+
+        .gslider-header {
+          margin-top: 0.75rem;
+          margin-bottom: 1rem;
+
+          .gslider-header-txt {
+            font-size: 1rem;
+            line-height: 1.2;
+            margin-right: 0.75rem;
+          }
+
+          .gslider-header-line {
+            display: none;
+          }
+        }
+
+        .gslider-img-container {
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 0.5rem;
+        }
+      }
+    }
+
+    .gallery-right {
+      .gallery-right-overlayer {
+        opacity: 1;
+
+        .btn {
+          margin-bottom: 1rem;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+// ========== Photo Gallery Section ==========

@@ -34,8 +34,9 @@
 
 body {
   font-family: "PlayfairDisplay-Regular", sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  letter-spacing: 1px;
   color: $primary-textcolor;
   background-color: $normal-backgrouncolor;
   overflow-x: hidden;
@@ -54,9 +55,10 @@ a {
 }
 
 img {
-  // width: 100%;
+  width: 100%;
   display: block;
 }
+
 
 //Responsive Settings
 @include normalScreens {

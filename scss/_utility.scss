@@ -150,7 +150,7 @@
 // ========== Font Styles ==========
 .section-top-header {
   font-size: 3rem;
-  font-family:  'Montserrat-Bold', sans-serif;
+  font-family: "Montserrat-Bold", sans-serif;
   text-transform: capitalize;
 
   &-dark {
@@ -163,7 +163,7 @@
 
 .section-bottom-header {
   font-size: 4rem;
-  font-family:  'Montserrat-Bold', sans-serif;
+  font-family: "Montserrat-Bold", sans-serif;
   text-transform: uppercase;
   margin-bottom: 2rem;
 
@@ -180,16 +180,31 @@
 
 .section-content {
   font-size: 1.6rem;
-  font-family: 'PlayfairDisplay-Regular', sans-serif;
+  font-family: "PlayfairDisplay-Regular", sans-serif;
   line-height: 1.6;
   letter-spacing: 2px;
   text-transform: capitalize;
 
   &-italic {
-    font-family: 'PlayfairDisplay-Italic', sans-serif;
+    font-family: "PlayfairDisplay-Italic", sans-serif;
   }
   &-blodItalic {
-    font-family: 'PlayfairDisplay-BoldItalic', sans-serif;
+    font-family: "PlayfairDisplay-BoldItalic", sans-serif;
+  }
+  &-light {
+    color: $normal-backgrouncolor;
+  }
+}
+
+.section-sub-header {
+  font-size: 2.5rem;
+  font-family: "Montserrat-Bold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+
+  .section-content {
+    letter-spacing: 5px;
+    font-size: 2.5rem;
   }
 }
 
@@ -198,15 +213,25 @@
   .section-top-header {
     font-size: 2rem;
   }
-  
+
   .section-bottom-header {
     font-size: 3rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .section-content {
     font-size: 1.2rem;
     line-height: 1.5;
+  }
+
+  .section-sub-header {
+    font-size: 2rem;
+    letter-spacing: 4px;
+
+    .section-content {
+      letter-spacing: 4px;
+      font-size: 2rem;
+    }
   }
 }
 
@@ -214,15 +239,25 @@
   .section-top-header {
     font-size: 2.4rem;
   }
-  
+
   .section-bottom-header {
     font-size: 3.2rem;
     margin-bottom: 1.6rem;
   }
-  
+
   .section-content {
     font-size: 1.4rem;
     line-height: 1.5;
+  }
+
+  .section-sub-header {
+    font-size: 2rem;
+    letter-spacing: 4px;
+
+    .section-content {
+      letter-spacing: 4px;
+      font-size: 2rem;
+    }
   }
 }
 
@@ -230,15 +265,49 @@
   .section-top-header {
     font-size: 1.5rem;
   }
-  
+
   .section-bottom-header {
     font-size: 2rem;
     margin-bottom: 1rem;
   }
-  
+
   .section-content {
     font-size: 1rem;
     line-height: 1.4;
   }
+
+  .section-sub-header {
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+
+    .section-content {
+      letter-spacing: 3px;
+      font-size: 1.6rem;
+    }
+  }
 }
 // ========== Font Styles ==========
+
+// ========== Btn Styles ==========
+a.btn:hover {
+  color: $light-backgrouncolor;
+}
+
+.btn {
+  padding: 1.2rem 2.4rem;
+  border-radius: 50px;
+
+  &-primary {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background-color: $primary-textcolor;
+    color: $light-backgrouncolor;
+  }
+
+  &-secondary {
+    font-size: 1rem;
+    background-color: $normal-backgrouncolor;
+    font-family: 'Montserrat-Regular', sans-serif;
+  }
+}
+// ========== Btn Styles ==========

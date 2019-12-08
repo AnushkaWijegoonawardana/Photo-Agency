@@ -83,7 +83,7 @@ $form-textcolor: #c8c8c8;
 
 // Responsive Media Query Mixins
 @mixin normalScreens {
-  @media (min-width: 1025px) and (max-width: 1280px) {
+  @media (min-width: 1025px) and (max-width: 1366px) {
     @content;
   }
 }
