@@ -662,8 +662,142 @@
         }
       }
 
-      .pricing-section-footer {
+      .pricing-table-footer {
         padding-top: 2rem;
+      }
+    }
+  }
+}
+
+@include normalScreens {
+  .pricing-section {
+    .pricing-section-header {
+      margin-bottom: 3rem;
+    }
+
+    .pricing-table-grid {
+      grid-gap: 3rem;
+
+      .pricing-table {
+        padding: 1.75rem;
+        .pricing-table-header {
+          padding-bottom: 1.75rem;
+
+          .section-content {
+            font-size: 1.75rem;
+            line-height: 2.75rem;
+          }
+          .price-tag {
+            font-size: 2.2rem;
+            line-height: 3.75rem;
+          }
+        }
+
+        .pricing-table-body {
+          padding: 1.75rem 0;
+
+          .table-body-item {
+            font-size: 1.1rem;
+          }
+        }
+
+        .pricing-table-footer {
+          padding-top: 1.75rem;
+        }
+      }
+    }
+  }
+}
+
+@include midScreenc {
+  .pricing-section {
+    .pricing-section-header {
+      margin-bottom: 2.75rem;
+    }
+
+    .pricing-table-grid {
+      grid-template-columns: 1fr;
+      grid-gap: 2.5rem;
+
+      .pricing-table {
+        padding: 1.5rem;
+
+        .pricing-table-header {
+          padding-bottom: 1.5rem;
+
+          .section-content {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+          }
+
+          h3 {
+            font-size: 1.1rem;
+          }
+
+          .price-tag {
+            font-size: 2rem;
+            line-height: 3rem;
+          }
+        }
+
+        .pricing-table-body {
+          padding: 1.5rem 0;
+
+          .table-body-item {
+            font-size: 1.1rem;
+          }
+        }
+
+        .pricing-table-footer {
+          padding-top: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@include smallScreens {
+  .pricing-section {
+    .pricing-section-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .pricing-table-grid {
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+
+      .pricing-table {
+        padding: 1.25rem;
+
+        .pricing-table-header {
+          padding-bottom: 1.25rem;
+
+          .section-content {
+            font-size: 1.25rem;
+            line-height: 2rem;
+          }
+
+          h3 {
+            font-size: 1rem;
+          }
+
+          .price-tag {
+            font-size: 1.75rem;
+            line-height: 2.5rem;
+          }
+        }
+
+        .pricing-table-body {
+          padding: 1rem 0;
+
+          .table-body-item {
+            font-size: 0.9rem;
+          }
+        }
+
+        .pricing-table-footer {
+          padding-top: 1rem;
+        }
       }
     }
   }
