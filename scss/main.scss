@@ -59,6 +59,10 @@ img {
   display: block;
 }
 
+.swiper-container {
+  z-index: 0 !important;
+}
+
 
 //Responsive Settings
 @include normalScreens {

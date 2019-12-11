@@ -325,9 +325,52 @@ a.btn:hover {
       background-color: $theme-color;
     }
   }
+
+  &-blog {
+    padding: 1.2rem 0.2rem;
+    text-transform: uppercase;
+    font-family: "Montserrat-Bold", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    display: inline-block;
+
+    i {
+      margin-left: 0.5rem;
+      font-size: 1.1rem;
+    }
+  }
 }
 
 .btn.btn-secondary.btn-secondary-white:hover {
   color: $primary-textcolor;
 }
 // ========== Btn Styles ==========
+
+
+// ========== Blog Section Letter Styles Styles ==========
+.blog-header {
+  font-family: "PlayfairDisplay-Bold", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  padding: 1.5rem 0;
+  text-transform: capitalize;
+}
+
+.blog-intcontent {
+  font-family: "PlayfairDisplay-Regular", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: $primary-textcolorlighter;
+}
+
+@include smallScreens {
+  .blog-header {
+    font-size: 1.2rem;
+    padding: 1.2rem 0;
+  }
+
+  .blog-intcontent {
+    font-size: 0.9;
+  }
+}
+// ========== Blog Section Letter Styles Styles ==========
