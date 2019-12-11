@@ -339,6 +339,18 @@ a.btn:hover {
       font-size: 1.1rem;
     }
   }
+
+  &-form {
+    border: none;
+    border-radius: 0;
+    float: right;
+    font-family: "Montserrat-Regular", sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $normal-backgrouncolor;
+    background-color: $theme-color;
+    cursor: pointer;
+  }
 }
 
 .btn.btn-secondary.btn-secondary-white:hover {

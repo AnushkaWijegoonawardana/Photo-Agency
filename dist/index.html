@@ -19,6 +19,21 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/swiper.min.css" />
 
+    <style>
+      .mapouter {
+        position: relative;
+        text-align: right;
+        height: 100%;
+        width: 100%;
+      }
+      .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+
     <!-- Header Script Files -->
     <script
       src="https://kit.fontawesome.com/b27501a5af.js"
@@ -527,6 +542,53 @@
       </div>
     </div>
     <!-- Blog Section -->
+
+    <!-- Contact Us Section -->
+    <div class="contact-us-section" id="contactus-section">
+      <!-- Contact Us Map Section -->
+      <div class="map-section">
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="100%"
+              height="100%"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe
+            ><a
+              href="https://www.bitgeeks.net/divi-discount-elegant-themes-coupon/"
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Us Form Section -->
+      <div class="form-section">
+        <div class="box-container">
+          <h1 class="section-top-header section-top-header-dark">Get in</h1>
+          <h1 class="section-sub-header">
+            touch
+            <span class="section-content section-content-blodItalic">with</span>
+            us
+          </h1>
+
+          <!-- Contact Form -->
+          <form action="">
+            <input type="text" name="name" id="name" placeholder="name" />
+            <input type="email" name="email" id="email" placeholder="email">
+            <input type="url" name="weburl" id="weburl" placeholder="web address">
+            <textarea name="" id="meassage" cols="30" rows="10" placeholder="leave a message"></textarea>
+            <button type="submit" class="btn btn-form">send a message</button>
+          </form>
+          <!-- Contact Form -->
+        </div>
+      </div>
+    </div>
+    <!-- Contact Us Section -->
 
     <!-- JavaScript Files -->
 

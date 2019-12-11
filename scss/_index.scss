@@ -809,3 +809,67 @@
   background-color: $light-backgrouncolor;
 }
 // ========== Blog Section ==========
+
+// ========== contact-us-section ==========
+.contact-us-section {
+  @include displayGrid(center, center, 0);
+  grid-template-columns: repeat(2, 1fr);
+
+  .map-section {
+    height: 100%;
+    min-height: 50vh;
+  }
+
+  .form-section {
+    padding-bottom: 4rem;
+    form {
+      margin-top: 2rem;
+
+      input,
+      textarea {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 1.2rem 2.4rem;
+        border: 2px solid $light-backgrouncolor;
+        font-family: "Montserrat-Regular", sans-serif;
+        text-transform: uppercase;
+        color: $primary-textcolorlighter;
+
+        &::placeholder {
+          color: $form-textcolor;
+          font-family: "Montserrat-Regular", sans-serif;
+          text-transform: uppercase;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@include midScreenc {
+  .contact-us-section {
+    grid-template-columns: 1fr;
+
+    .form-section {
+      padding-bottom: 3rem;
+      form {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@include smallScreens {
+  .contact-us-section {
+    grid-template-columns: 1fr;
+
+    .form-section {
+      padding-bottom: 2rem;
+      form {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+// ========== contact-us-section ==========
